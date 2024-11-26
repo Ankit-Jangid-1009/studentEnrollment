@@ -18,7 +18,7 @@ app.use(express.static("./public"))
     app.use(express.urlencoded({ limit: "30mb", extended: true }))
 // app.use(cors())
 // MongoDB Connection
-const dbURL = 'mongodb://localhost:27017/studentDetails';
+const dbURL = 'mongodb+srv://ankit123:Ankit1009@student-details.bmez7.mongodb.net/?retryWrites=true&w=majority&appName=student-details';
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('MongoDB connection error:', err));
