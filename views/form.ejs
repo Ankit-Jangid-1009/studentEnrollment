@@ -288,7 +288,7 @@ async function submitForm() {
   };
 
   try {
-    const response = await axios.post('http://localhost:5000/api/enroll', formData);
+    const response = await axios.post('https://studentenrollment-gagk.onrender.com/api/enroll', formData);
     // alert(response.data.message); // Show success message
     window.location.href = 'thank_you'; // Redirect to Thank You page
   } catch (error) {
