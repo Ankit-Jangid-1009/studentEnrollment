@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(135deg, #5a67d8, #4a90e2); */
+    background: linear-gradient(to right, #7629c9, #a47ecd);
+    /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5626b5;
+  }
+  .form-page {
+    display: none;
+  }
+  .form-page.active {
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #5a5a5a;
+  }
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+  }
+  .form-group input:focus,
+  .form-group select:focus {
+    box-shadow: 0 0 8px rgba(90, 103, 216, 0.5);
+  }
+  .sub-heading {
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 15px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons button {
+    background: linear-gradient(135deg, #5a67d8, #4a90e2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .buttons button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(90, 103, 216, 0.4);
+  }
+  .buttons button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  .review-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  .review-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border: 2px solid #4a5568; /* Dark border for better contrast */
+    font-family: Arial, sans-serif;
+  }
+  
+  .review-table thead {
+    background-color: #7c55d7; /* Unified header color */
+    color: white;
+    text-align: center;
+  }
+  
+  .review-table th,
+  .review-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    width: 50%; /* Ensure equal width for columns */
+  }
+  
+  .review-table tbody tr:nth-child(even) {
+    background-color: #f3f4f6; /* Light gray for alternate rows */
+  }
+  
+  .review-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White for odd rows */
+  }
+  
+  /* Additional enhancements */
+  body {
+    background-color: #edf2f7; /* Subtle light background for contrast */
+  }
+  
+  h4 {
+    margin-top: 30px;
+    color: #4a5568; /* Header text in gray */
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  

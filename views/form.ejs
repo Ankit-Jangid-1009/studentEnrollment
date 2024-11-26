@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Enrollment Form</title>
+  <link rel="stylesheet" href="../stylesheets/style.css">
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Enrollment Form</h2>
+    <form id="enrollmentForm" novalidate>
+      <!-- Page 1 -->
+      <div class="form-page active" id="page1">
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course" required>
+            <option value="">Select Course</option>
+            <option value="B.Tech">B.E./B.Tech</option>
+            <option value="MBA">MBA</option>
+            <option value="M.Tech">M.E./M.Tech</option>
+          </select>
+          <div class="error-message" id="courseError"></div>
+        </div>
+        <div class="form-group">
+          <label for="specialization">Specialization</label>
+          <select id="specialization" name ="specialization" required>
+            <option value="">Select Specialization</option>
+            <option value="CSE" class="B.Tech">Computer Science Engineering</option>
+            <option value="ECE" class="B.Tech">Electronics Engineering</option>
+            <option value="EE" class="B.Tech">Electrical Engineering</option>
+            <option value="PS" class="M.Tech">Power System</option>
+            <option value="VLSI" class="M.Tech">VLSI</option>
+            <option value="CS" class="M.Tech">Control System</option>
+            <option value="ES" class="M.Tech">Embedded System</option>
+            <option value="AT" class="M.Tech">AI</option>
+            <option value="WT" class="M.Tech">Web Technology</option>
+            <option value="Finance" class="MBA">Finance</option>
+            <option value="BD" class="MBA">Bussiness Development</option>
+          </select>
+          <div class="error-message" id="specializationError"></div>
+        </div>
+        <div class="form-group">
+          <label for="academicSession">Academic Session</label>
+          <select id="academicSession" required>
+            <option value="">Select Year</option>
+            <option value="2024-25">2024-25</option>
+            <option value="2025-26">2025-26</option>
+          </select>
+          <div class="error-message" id="academicSessionError"></div>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="form-page" id="page2">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required minlength="3">
+          <div class="error-message" id="nameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="fatherName">Father's Name</label>
+          <input type="text" id="fatherName" required minlength="3">
+          <div class="error-message" id="fatherNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="motherName">Mother's Name</label>
+          <input type="text" id="motherName" required minlength="3">
+          <div class="error-message" id="motherNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+          <div class="error-message" id="dobError"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+          <div class="error-message" id="emailError"></div>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+          <div class="error-message" id="mobileError"></div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" id="address" required>
+          <div class="error-message" id="addressError"></div>
+        </div>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="form-page" id="page3">
+        <h3>Previous Education Details</h3>
+        <h4 class="sub-heading">Secondary Education</h4>
+        <div class="form-group">
+          <label for="secRollNo">Roll Number</label>
+          <input type="text" id="secRollNo" required>
+          <div class="error-message" id="secRollNoError"></div>
+        </div>
+        <div class="form-group">
+        <label for="secPassingYear">Year of Passing</label>
+        <input type="number" id="secPassingYear" required>
+        <div class="error-message" id="secPassingYearError"></div>
+      </div>
+        <div class="form-group">
+          <label for="secSchoolName">School Name</label>
+          <input type="text" id="secSchoolName" required>
+          <div class="error-message" id="secSchoolNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="secBoardName">Board Name</label>
+          <input type="text" id="secBoardName" required>
+          <div class="error-message" id="secBoardNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="secPercentage">Percentage</label>
+          <input type="text" id="secPercentage" required pattern="^(100|[1-9]?\d(\.\d{1,2})?)$">
+          <div class="error-message" id="secPercentageError"></div>
+        </div>
+
+        <h4 class="sub-heading">Higher Secondary Education</h4>
+        <div class="form-group">
+          <label for="highSecRollNo">Roll Number</label>
+          <input type="text" id="highSecRollNo" required>
+          <div class="error-message" id="highSecRollNoError"></div>
+        </div>
+        <div class="form-group">
+          <label for="highSecPassingYear">Year of Passing</label>
+          <input type="number" id="highSecPassingYear" required>
+          <div class="error-message" id="highSecPassingYearError"></div>
+        </div>
+      
+        <div class="form-group">
+          <label for="highSecSchoolName">School Name</label>
+          <input type="text" id="highSecSchoolName" required>
+          <div class="error-message" id="highSecSchoolNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="highSecBoardName">Board Name</label>
+          <input type="text" id="highSecBoardName" required>
+          <div class="error-message" id="highSecBoardNameError"></div>
+        </div>
+        <div class="form-group">
+          <label for="highSecPercentage">Percentage</label>
+          <input type="text" id="highSecPercentage" required pattern="^(100|[1-9]?\d(\.\d{1,2})?)$">
+          <div class="error-message" id="highSecPercentageError"></div>
+        </div>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="form-page" id="page4">
+        <h3>Review Your Details</h3>
+        <div id="review"></div>
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="prevBtn" disabled>Back</button>
+        <button type="button" id="nextBtn">Next</button>
+      </div>
+    </form>
+  </div>
+  
+</body>
+<script>
+    const formPages = document.querySelectorAll('.form-page');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const form = document.getElementById('enrollmentForm');
+const reviewSection = document.getElementById('review');
+let currentPage = 0;
+
+// Show the current form page
+function showPage(index) {
+  formPages.forEach((page, i) => {
+    page.classList.toggle('active', i === index);
+  });
+  prevBtn.disabled = index === 0;
+  nextBtn.textContent = index === formPages.length - 1 ? 'Submit' : 'Next';
+
+  // Populate review section on the last page
+  if (index === formPages.length - 1) {
+    populateReview();
+  }
+}
+
+// Move to the next or previous page
+nextBtn.addEventListener('click', async () => {
+  if (currentPage === formPages.length - 1) {
+    await submitForm(); // Submit form on the last page
+  } else {
+    currentPage++;
+    showPage(currentPage);
+  }
+});
+
+prevBtn.addEventListener('click', () => {
+  if (currentPage > 0) {
+    currentPage--;
+    showPage(currentPage);
+  }
+});
+
+// Populate the review section with entered details
+function populateReview() {
+  reviewSection.innerHTML = `
+    <table class="review-table">
+      <thead>
+        <tr><th colspan="2">Course Selection</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Course:</td><td>${document.getElementById('course').value || 'N/A'}</td></tr>
+        <tr><td>Specialization:</td><td>${document.getElementById('specialization').value || 'N/A'}</td></tr>
+        <tr><td>Academic Session:</td><td>${document.getElementById('academicSession').value || 'N/A'}</td></tr>
+      </tbody>
+    </table>
+    <table class="review-table">
+      <thead>
+        <tr><th colspan="2">Basic Details</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Name:</td><td>${document.getElementById('name').value || 'N/A'}</td></tr>
+        <tr><td>Father's Name:</td><td>${document.getElementById('fatherName').value || 'N/A'}</td></tr>
+        <tr><td>Mother's Name:</td><td>${document.getElementById('motherName').value || 'N/A'}</td></tr>
+        <tr><td>Date of Birth:</td><td>${document.getElementById('dob').value || 'N/A'}</td></tr>
+        <tr><td>Email:</td><td>${document.getElementById('email').value || 'N/A'}</td></tr>
+        <tr><td>Mobile Number:</td><td>${document.getElementById('mobile').value || 'N/A'}</td></tr>
+        <tr><td>Address:</td><td>${document.getElementById('address').value || 'N/A'}</td></tr>
+      </tbody>
+    </table>
+    <table class="review-table">
+      <thead>
+        <tr><th colspan="2">Secondary Education</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Roll Number:</td><td>${document.getElementById('secRollNo').value || 'N/A'}</td></tr>
+        <tr><td>Year of Passing:</td><td>${document.getElementById('secPassingYear').value || 'N/A'}</td></tr>
+        <tr><td>School Name:</td><td>${document.getElementById('secSchoolName').value || 'N/A'}</td></tr>
+        <tr><td>Board Name:</td><td>${document.getElementById('secBoardName').value || 'N/A'}</td></tr>
+        <tr><td>Percentage:</td><td>${document.getElementById('secPercentage').value || 'N/A'}</td></tr>
+      </tbody>
+    </table>
+    <table class="review-table">
+      <thead>
+        <tr><th colspan="2">Higher Secondary Education</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Roll Number:</td><td>${document.getElementById('highSecRollNo').value || 'N/A'}</td></tr>
+        <tr><td>Year of Passing:</td><td>${document.getElementById('highSecPassingYear').value || 'N/A'}</td></tr>
+        <tr><td>School Name:</td><td>${document.getElementById('highSecSchoolName').value || 'N/A'}</td></tr>
+        <tr><td>Board Name:</td><td>${document.getElementById('highSecBoardName').value || 'N/A'}</td></tr>
+        <tr><td>Percentage:</td><td>${document.getElementById('highSecPercentage').value || 'N/A'}</td></tr>
+      </tbody>
+    </table>
+  `;
+}
+
+// Submit the form data to the server
+// Submit the form data to the server using Axios
+async function submitForm() {
+  const formData = {
+    course: document.getElementById('course').value,
+    specialization: document.getElementById('specialization').value,
+    academicSession: document.getElementById('academicSession').value,
+    name: document.getElementById('name').value,
+    fatherName: document.getElementById('fatherName').value,
+    motherName: document.getElementById('motherName').value,
+    dob: document.getElementById('dob').value,
+    email: document.getElementById('email').value,
+    mobile: document.getElementById('mobile').value,
+    address: document.getElementById('address').value,
+    secondary: {
+      rollNo: document.getElementById('secRollNo').value,
+      passingYear: document.getElementById('secPassingYear').value,
+      schoolName: document.getElementById('secSchoolName').value,
+      boardName: document.getElementById('secBoardName').value,
+      percentage: document.getElementById('secPercentage').value,
+    },
+    higherSecondary: {
+      rollNo: document.getElementById('highSecRollNo').value,
+      passingYear: document.getElementById('highSecPassingYear').value,
+      schoolName: document.getElementById('highSecSchoolName').value,
+      boardName: document.getElementById('highSecBoardName').value,
+      percentage: document.getElementById('highSecPercentage').value,
+    },
+  };
+
+  try {
+    const response = await axios.post('http://localhost:5000/api/enroll', formData);
+    // alert(response.data.message); // Show success message
+    window.location.href = 'thank_you'; // Redirect to Thank You page
+  } catch (error) {
+    if (error.response && error.response.data) {
+      alert('Error: ' + error.response.data.message);  // Show validation error message
+    } else {
+      alert('An unexpected error occurred.');
+    }
+  }
+}
+
+
+
+
+// Initialize the form
+showPage(currentPage);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</html>
